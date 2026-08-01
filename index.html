@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,182 +8,139 @@
 
 <style>
 
-*{
-box-sizing:border-box;
-}
-
 body{
 margin:0;
-padding:20px;
-font-family:"Arial",sans-serif;
-background:linear-gradient(135deg,#f8f9ff,#eef4ff);
-display:flex;
-justify-content:center;
+font-family:Arial,sans-serif;
+background:#f5f7ff;
+color:#333;
+}
+
+.menu-btn{
+position:fixed;
+top:20px;
+left:20px;
+font-size:28px;
+cursor:pointer;
+z-index:3;
+}
+
+.sidebar{
+position:fixed;
+left:-260px;
+top:0;
+width:240px;
+height:100%;
+background:white;
+box-shadow:5px 0 20px rgba(0,0,0,.15);
+padding-top:70px;
+transition:.3s;
+z-index:2;
+}
+
+.sidebar.active{
+left:0;
+}
+
+.sidebar a{
+display:block;
+padding:18px;
+text-decoration:none;
+color:#0b57d0;
+font-weight:bold;
+}
+
+.container{
+max-width:520px;
+margin:auto;
+padding:30px 20px;
 }
 
 .card{
-
-width:100%;
-max-width:520px;
 background:white;
-border-radius:28px;
-padding:30px;
-box-shadow:0 15px 40px rgba(0,0,0,0.12);
-
+border-radius:25px;
+padding:25px;
+margin-top:50px;
+box-shadow:0 10px 30px rgba(0,0,0,.12);
 }
-
-
-.profile{
-
-text-align:center;
-
-}
-
 
 .logo{
-
-width:95px;
-height:95px;
+width:90px;
+height:90px;
+background:#eaf1ff;
 border-radius:50%;
-background:#edf3ff;
 display:flex;
 align-items:center;
 justify-content:center;
+font-size:40px;
 margin:auto;
-font-size:45px;
-
 }
-
 
 h1{
-
+text-align:center;
 color:#0b57d0;
-font-size:28px;
-margin:18px 0 8px;
-
 }
-
 
 .subtitle{
-
-color:#666;
+text-align:center;
 line-height:1.7;
-font-size:15px;
-
+color:#666;
 }
 
-
-
 .section{
-
-margin-top:25px;
 background:#f8faff;
 padding:20px;
 border-radius:18px;
-
+margin-top:20px;
 }
 
-
-
-.section h2{
-
-font-size:18px;
+h2{
 color:#0b57d0;
-margin-top:0;
-
+font-size:20px;
 }
-
-
-
-.item{
-
-color:#444;
-line-height:1.9;
-font-size:15px;
-
-}
-
-
-
-.support{
-
-background:#f1f7ff;
-
-}
-
-
-
-.label{
-
-font-size:13px;
-color:#777;
-margin-bottom:7px;
-
-}
-
-
-.value{
-
-font-size:16px;
-font-weight:bold;
-word-break:break-word;
-color:#222;
-
-}
-
-
 
 button{
-
 width:100%;
-margin-top:12px;
-padding:13px;
-border:none;
+padding:12px;
+margin-top:10px;
+border:0;
 border-radius:12px;
 background:#0b57d0;
 color:white;
-font-size:15px;
 cursor:pointer;
-
 }
 
-
-
-button:hover{
-
-background:#0846a5;
-
+.value{
+font-weight:bold;
+word-break:break-word;
 }
-
-
-
-.footer{
-
-text-align:center;
-margin-top:25px;
-font-size:13px;
-color:#777;
-line-height:1.6;
-
-}
-
 
 </style>
 
 </head>
 
-
 <body>
 
+
+<div class="menu-btn" onclick="openMenu()">☰</div>
+
+
+<div class="sidebar" id="menu">
+
+<a href="#dreams">✨ My Dreams</a>
+<a href="#journey">👩‍🏫 My Journey</a>
+<a href="#support">🤍 Support</a>
+<a href="#bank">🏦 Bank Information</a>
+
+</div>
+
+
+
+<div class="container">
 
 <div class="card">
 
 
-<div class="profile">
-
-<div class="logo">
-🌸
-</div>
+<div class="logo">🌸</div>
 
 
 <h1>Sawsan's Dream Journey</h1>
@@ -198,112 +153,74 @@ Teacher • Learner • Creator
 
 </div>
 
-</div>
 
 
 
+<div class="section" id="dreams">
 
-<div class="section">
+<h2>✨ My Main Dreams</h2>
 
-
-<h2>
-✨ My Main Dreams
-</h2>
-
-
-<div class="item">
-
+<p>
 🎓 Online Study & Scholarship<br>
-
 🖨️ Creating Educational Materials<br>
-
-🚗 Dream Car to help me go to school
-
-</div>
-
+🚗 Dream Car for my teaching journey
+</p>
 
 </div>
 
 
 
 
+<div class="section" id="journey">
 
-<div class="section">
+<h2>👩‍🏫 My Journey</h2>
 
-
-<h2>
-🌱 My Goals
-</h2>
-
-
-<div class="item">
-
+<p>
 💻 Learning Technology<br>
-
-👩‍🏫 Becoming an Excellent Teacher<br>
-
-📚 Creating useful educational resources<br>
-
-🌍 Improving my skills every day
-
-</div>
-
+📚 Improving my skills<br>
+🌱 Becoming an excellent teacher<br>
+🎥 Creating educational content
+</p>
 
 </div>
 
 
 
 
+<div class="section" id="support">
 
-<div class="section">
+<h2>🤍 Support My Journey</h2>
 
-
-<h2>
-🤍 Support My Journey
-</h2>
-
-
-<div class="item">
-
-Your support helps me take steps toward my dreams and education. Thank you for being part of my journey.
-
-</div>
-
+<p>
+Your support helps me move closer to my dreams and continue learning.
+Thank you for being part of my journey.
+</p>
 
 </div>
 
 
 
 
+<div class="section" id="bank">
 
-<div class="section support">
-
-
-<h2>
-🏦 Bank Information
-</h2>
+<h2>🏦 Bank Information</h2>
 
 
-
-<div class="label">
-Account Holder
-</div>
-
+<p>
+Account Holder:
+</p>
 
 <div class="value">
 SAWSAN SALEM EBSHIR
 </div>
 
 
-
-
 <br>
 
 
-<div class="label">
-Bank
-</div>
-
+<p>
+Bank:
+</p>
 
 <div class="value">
 North Africa Bank
@@ -311,34 +228,30 @@ North Africa Bank
 
 
 
-
 <br>
 
 
-<div class="label">
-Account Number
-</div>
-
+<p>
+Account Number:
+</p>
 
 <div class="value" id="account">
-075031139686016
+YOUR_ACCOUNT_NUMBER
 </div>
 
 
 <button onclick="copyText('account')">
-Copy Account Number
+075031139686016
 </button>
-
 
 
 
 <br><br>
 
 
-<div class="label">
-IBAN
-</div>
-
+<p>
+IBAN:
+</p>
 
 <div class="value" id="iban">
 LY40007075075031139686016
@@ -350,27 +263,23 @@ Copy IBAN
 </button>
 
 
-
 </div>
 
 
 
-
-
-<div class="footer">
-
-Please verify the details before sending.<br>
-Thank you for supporting my journey 🤍
-
 </div>
-
-
 
 </div>
 
 
 
 <script>
+
+function openMenu(){
+
+document.getElementById("menu").classList.toggle("active");
+
+}
 
 
 function copyText(id){
@@ -383,11 +292,8 @@ alert("Copied Successfully ✅");
 
 }
 
-
 </script>
 
 
-
 </body>
-
 </html>
